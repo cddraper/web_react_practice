@@ -1,9 +1,13 @@
 import React from 'react';
-import Navbar from './Navbar/navbar';
+import Navbar from './Navbar';
+import Carousel from './Carousel';
 
 function App() {
   return (
-    <Navbar />
+    <div>
+      <Navbar />
+      <Carousel />
+    </div>
   );
 }
 
