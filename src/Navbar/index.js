@@ -2,12 +2,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// Internal Dependencies
+import latteArt from '../assets/photos/latteArt.jpg';
+
 const StyledNav = styled.nav({
     display: 'grid',
     alignItems: 'center',
     gridTemplateColumns: '20% 80%',
     background: 'slateblue',
-    height: '50px',
+    height: '70px',
+    padding: '3px',
 })
 
 const StyledUl = styled.ul({
@@ -22,11 +26,17 @@ const StyledA = styled.a({
     paddingRight: '2em',
 })
 
+const StyledImg = styled.img`
+    max-height: 100%;
+    border: 2px solid lightblue;
+    border-radius: 50%;
+`
+
 class Navbar extends React.Component {
     render(){
         return (
             <StyledNav>
-                <img src="#" />
+                <StyledImg src={latteArt} />
                 <StyledUl>
                     <li><StyledA href="#">Home</StyledA></li>
                     <li><StyledA href="#">About</StyledA></li>
