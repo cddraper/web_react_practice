@@ -8,7 +8,7 @@ import latteArt from '../assets/photos/latteArt.jpg';
 const StyledNav = styled.nav({
     display: 'grid',
     alignItems: 'center',
-    gridTemplateColumns: '20% 80%',
+    gridTemplateColumns: '20% 40% 40%',
     background: 'slateblue',
     height: '70px',
     padding: '3px',
@@ -32,11 +32,22 @@ const StyledImg = styled.img`
     border-radius: 50%;
 `
 
+const StyledSearch = styled.input`
+    width: 25vw;
+    height: 2em;
+    justify-self: center;
+    padding-left: 10px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+`
+
 class Navbar extends React.Component {
     render(){
         return (
             <StyledNav>
                 <StyledImg src={latteArt} />
+                <StyledSearch type="text" placeholder="search" />
                 <StyledUl>
                     <li><StyledA href="#">Home</StyledA></li>
                     <li><StyledA href="#">About</StyledA></li>
