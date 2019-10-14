@@ -8,12 +8,17 @@ import picTwo from '../assets/photos/picTwo.jpg';
 import picThree from '../assets/photos/picThree.jpg';
 import CarouselButton from './carouselButton';
 
+const Container = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: center;
+`
 
 const Wrapper = styled.div({
     display: 'flex',
-    width: '50%',
+    width: '80%',
     height: '50vh',
-    justifyContent: 'space-around',
+    justifyContent: 'center',
     alignItems: 'center',
     margin: 'auto',
     marginTop: '2em',
@@ -51,7 +56,7 @@ const Carousel = () => {
 
     return (
         <Wrapper>
-            <CarouselButton onClickCTA={handleLeftClickCTA} >Hello</CarouselButton>
+            <CarouselButton onClickCTA={handleLeftClickCTA} ></CarouselButton>
             <StyledImg src={picArr[location]}/>
             <CarouselButton onClickCTA={handleRightClickCTA}>{">"}</CarouselButton>
         </Wrapper>
